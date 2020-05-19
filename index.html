@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Playground</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&family=Ubuntu+Mono:wght@400;700&family=VT323&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Multiplayer Team Generator</h1>
+        </div>
+
+        <div class="card-deck">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h3 class="card-title">How it works</h3>
+                </div>
+                <div class="card-body">
+                    <p>Ever struggle splitting your party of friends into multiple teams/groups?<br> Not Anymore :)
+                    </p>
+                    <ol>
+                        <li>Enter the number of players allowed per group/team</li>
+                        <li>Input player names one at a time.</li>
+                        <li>Click generate! It's that easy.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="card mb-4 calculator">
+                <div class="card-header">
+                    <h3 class="card-title">Generator</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <label for=" numPerTeamDropDown">
+                                <h5>Players Per Team</h5>
+                            </label>
+                        </div>
+                        <div class="col text-center">
+                            <select name="players per team" id="numPerTeamDropDown">
+                                <option>Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row text-center">
+                        <div class="col">
+                            <div class="input-group mb-3">
+                                <input autocomplete="off" class="form-control" type="text" name="name" id="nameInput"
+                                    placeholder="Add a Player">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-success" type="button" name="addPlayer"
+                                        id="addPlayerBtn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col">
+                            <div class="players-div">
+                                <hr class="mb-4 players-added-hr">
+                                <h5 class="players-added">Players</h5>
+                                <div id="user-input-div">
+                                    <h6 class="info-text text-muted mt-5">Player names will appear here...</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hr-button-div my-5">
+            <hr>
+            <div class="program-button-div">
+                <button class="btn btn-success btn-lg generate-button" type="button" name="submitBtn"
+                    id="submitBtn">Generate
+                    Teams</button>
+                <button class="btn btn-warning btn-lg reset-button" type="button" name="resetBtn"
+                    id="resetBtn">Reset</button>
+            </div>
+        </div>
+        <div class="row generated-teams-row">
+            <div class="col">
+                <div class="card result-card">
+                    <div class="card-header">
+                        <h3>Generated Teams</h3>
+                    </div>
+                    <div class="card-body" id="result-div">
+                        <h6 class="text-muted">Player names will appear here...</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+
+
+</html>

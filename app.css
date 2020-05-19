@@ -1,0 +1,56 @@
+/* font-family: 'Rajdhani', sans-serif;
+font-family: 'Ubuntu Mono', monospace;
+font-family: 'VT323', monospace; */
+
+body {
+	font-family: 'Rajdhani', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	font-family: 'Ubuntu Mono', monospace;
+	font-size: 1rem;
+}
+
+.players-div {
+	position: relative;
+}
+
+.players-added {
+	background-color: #616163;
+	margin: 0 auto;
+	color: #f0f7f4;
+	font-size: 1.2rem;
+	padding: 5px;
+	border-radius: 6px;
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.text-muted {
+	font-style: italic;
+}
+
+.hr-button-div {
+	position: relative;
+}
+
+.program-button-div {
+	position: absolute;
+	top: -22px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.result-card {
+	margin: 0 20%;
+}
+
+.generated-teams-row {
+	margin: 0 auto 50px;
+}
