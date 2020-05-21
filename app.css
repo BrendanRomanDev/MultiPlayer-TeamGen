@@ -1,9 +1,19 @@
 /* font-family: 'Rajdhani', sans-serif;
 font-family: 'Ubuntu Mono', monospace;
 font-family: 'VT323', monospace; */
+/* font-family: 'Ubuntu', sans-serif; */
 
 body {
 	font-family: 'Rajdhani', sans-serif;
+	background-color: #545d65;
+}
+
+p {
+	font-size: 1.4rem;
+	font-family: 'Ubuntu monospace', monospace;
+	text-transform: uppercase;
+	color: #b2b3b0;
+	margin: 0 auto;
 }
 
 ul {
@@ -11,15 +21,81 @@ ul {
 }
 
 li {
-	font-family: 'Ubuntu Mono', monospace;
-	font-size: 1rem;
+	text-align: left;
+	font-family: 'Ubuntu monospace', monospace;
+	font-size: 1.2rem;
+	color: #353c46;
+	margin: 25px auto 0;
+}
+@media (max-width: 992px) {
+	li {
+		font-size: 1rem;
+	}
 }
 
-.players-div {
+h5 {
+	font-size: 1.4rem;
+	margin: 0;
+}
+
+label {
+	margin: 0 auto;
+}
+
+.my-jumbo {
+	padding: 5% 0;
+	text-align: center;
+}
+
+.page-title {
+	color: #ceff1a;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.subtitle {
+	color: #acbdba;
+	font-size: 2rem;
+	letter-spacing: .5px;
+}
+
+.card {
+	border: none;
+	text-align: center;
+	border-radius: 8px;
+}
+
+.card-header {
+	line-height: 0;
+	background-color: #353c46;
+	padding: 3% 0;
+}
+.card-title {
+	margin: 0;
+	color: #ff715b;
+	letter-spacing: 2.5px;
+	font-size: 1.8rem;
+}
+
+.card-hr {
+	background-color: #cccdca;
+	width: 50%;
+	opacity: 30%;
+	margin: 10px auto;
+}
+
+.card-body {
+	background-color: #eef0f2;
+	border-radius: 8px;
+}
+
+.info-div {
 	position: relative;
 }
 
-.players-added {
+.info-header {
 	background-color: #616163;
 	margin: 0 auto;
 	color: #f0f7f4;
@@ -32,19 +108,53 @@ li {
 	transform: translate(-50%);
 }
 
+.players-per-team-div {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.players-per-team-div h5 {
+	display: flex;
+	margin-bottom: 10px;
+}
+
+.select {
+	display: flex;
+	font-size: 1rem;
+	font-family: 'Ubuntu monospace', monospace;
+	margin-bottom: 10px;
+}
+
 .text-muted {
 	font-style: italic;
 }
 
 .hr-button-div {
 	position: relative;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
+.hr-button-div hr {
+	background-color: #e8eddf;
+	opacity: 75%;
 }
 
 .program-button-div {
+	text-align: center;
 	position: absolute;
 	top: -22px;
 	left: 50%;
 	transform: translate(-50%);
+}
+
+@media (max-width: 768px) {
+	.program-button-div {
+		width: 100%;
+		left: 50%;
+	}
 }
 
 .result-card {
