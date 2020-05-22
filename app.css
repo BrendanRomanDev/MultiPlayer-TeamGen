@@ -38,10 +38,6 @@ h5 {
 	margin: 0;
 }
 
-label {
-	margin: 0 auto;
-}
-
 .my-jumbo {
 	padding: 5% 0;
 	text-align: center;
@@ -108,27 +104,59 @@ label {
 	transform: translate(-50%);
 }
 
-.players-per-team-div {
+/* .players-per-team-div {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-evenly;
 	align-items: center;
-}
+} */
 
-.players-per-team-div h5 {
+/* .players-per-team-div h5 {
 	display: flex;
 	margin-bottom: 10px;
+} */
+.players-per-team-div {
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.select {
-	display: flex;
-	font-size: 1rem;
+.players-per-team-label {
+	font-size: 1.5rem;
+}
+
+.players-per-team-select {
+	max-width: 200px;
 	font-family: 'Ubuntu monospace', monospace;
-	margin-bottom: 10px;
 }
 
 .text-muted {
 	font-style: italic;
+}
+
+.btn-info {
+	background-color: #2176ae;
+	border: 1px solid #0c2a7f;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active {
+	background-color: #4291be;
+	border: 1px solid #0c2a7f;
+}
+
+.btn-danger {
+	background-color: #ec6652;
+	border: 1px solid #b44437;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active {
+	background-color: #ff7b64;
+	border: 1px solid #b44437;
 }
 
 .hr-button-div {

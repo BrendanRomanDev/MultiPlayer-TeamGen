@@ -16,8 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&family=Ubuntu+Mono:wght@400;700&family=VT323&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-
-
+    <link rel="stylesheet" href="node_modules\@fortawesome\fontawesome-free\css\all.css">
     <link rel="stylesheet" href="app.css">
 
 </head>
@@ -44,8 +43,6 @@
                         <h5>Divide your party into teams</h5>
                         <hr class="card-hr">
                     </div>
-
-
                     <ol>
                         <li>Enter the number of players allowed per group/team</li>
                         <li>Input player names one at a time.</li>
@@ -58,50 +55,44 @@
                     <h3 class="card-title">Generator</h3>
                 </div>
                 <div class="card-body">
-                    <hr class="card-hr">
-
-                    <form>
-                        <div class="form-row">
-                            <div class="col players-per-team-div">
-                                <label for="numPerTeamDropDown">
-                                    <h5>Players Per Team</h5>
-                                </label>
-                                <select name="players per team" id="numPerTeamDropDown" class="form-control">
-                                    <option>Select</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </div>
+                    <hr class="card-hr ">
+                    <div class="row players-per-team-div mt-4">
+                        <div class="col-6 col-sm-12 col-lg-6 players-per-team-label">
+                            <label for="numPerTeamDropDown">
+                                <h5>Players Per Team</h5>
+                            </label>
                         </div>
-                        <div class="form-row">
 
-
+                        <div class="col-6 col-sm-12 col-lg-6 players-per-team-select">
+                            <select name="players per team" id="numPerTeamDropDown" class="form-control select">
+                                <option class=>Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
                         </div>
-                    </form>
+                    </div>
 
-
-                    <hr class="card-hr">
-                    <div class="row text-center">
+                    <div class="row">
                         <div class="col">
                             <div class="input-group mb-3">
                                 <input autocomplete="off" class="form-control" type="text" name="name" id="nameInput"
                                     placeholder="Add a Player">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-success" type="button" name="addPlayer"
-                                        id="addPlayerBtn">+</button>
+                                    <button class="btn btn-info" type="button" name="addPlayer" id="addPlayerBtn"><i
+                                            class="fas fa-plus"></i></button>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                     <div class="row text-center">
                         <div class="col">
                             <div class="info-div">
@@ -109,7 +100,6 @@
                                 <h5>Players</h5>
                                 <hr class="card-hr">
                             </div>
-
                             <div id="user-input-div"></div>
                         </div>
                     </div>
@@ -121,10 +111,10 @@
         <div class="hr-button-div">
             <hr>
             <div class="program-button-div">
-                <button class="btn btn-success btn-lg generate-button mr-2" type="button" name="submitBtn"
+                <button class="btn btn-info btn-lg generate-button mr-2" type="button" name="submitBtn"
                     id="submitBtn">Generate
                     Teams</button>
-                <button class="btn btn-warning btn-lg reset-button" type="button" name="resetBtn"
+                <button class="btn btn-danger btn-lg reset-button" type="button" name="resetBtn"
                     id="resetBtn">Reset</button>
             </div>
         </div>
@@ -146,9 +136,6 @@
 
 
 
-
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -159,11 +146,8 @@
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
-
     <script src="app.js"></script>
 
 </body>
-
-
 
 </html>

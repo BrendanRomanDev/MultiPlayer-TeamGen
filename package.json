@@ -1,0 +1,11 @@
+{
+	"name": "MultiPlayerTeamGen",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/BrendanRomanDev/MultiPlayer-TeamGenerator.git",
+	"author": "Brendan Roman <brendanroman93@gmail.com>",
+	"license": "MIT",
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.13.0"
+	}
+}

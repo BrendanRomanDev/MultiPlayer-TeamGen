@@ -23,14 +23,15 @@ const addPlayer = (name) => {
 	const nameDiv = document.getElementById('user-input-div');
 	nameDiv.innerHTML = '';
 	const nameLi = newLi;
-	const addBtn = newBtn;
 	nameDiv.appendChild(newUl);
 	newUl.appendChild(nameLi);
 	nameLi.innerText = name;
 	const nameText = nameLi.innerText;
 	names.push(nameText);
-	nameLi.appendChild(addBtn);
+	nameLi.appendChild(newBtn);
+	nameLi.classList.add('player-name-li');
 	newBtn.innerText = '-';
+	newBtn.classList.add('player-name-btn');
 	newBtn.addEventListener('click', () => {
 		names.splice(names.indexOf(nameText), 1);
 		nameLi.remove();
@@ -161,4 +162,7 @@ const createShuffledList = (nameArray, maxPerTeam) => {
 //  ---- when you dont have a # selected and hit generate, it still submits after the error.
 // generate teams should reset the result Div first.
 // what happens if players per team exceeds players entered?
+
 //make it look nice : )
+// need to format the text as it comes in
+///can we add different columns to prevent overflow?
