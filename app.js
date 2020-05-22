@@ -21,6 +21,7 @@ const addPlayer = (name) => {
 	const newLi = document.createElement('li');
 	const newBtn = document.createElement('button');
 	const nameDiv = document.getElementById('user-input-div');
+	nameDiv.innerHTML = '';
 	const nameLi = newLi;
 	const addBtn = newBtn;
 	nameDiv.appendChild(newUl);
@@ -32,7 +33,7 @@ const addPlayer = (name) => {
 	newBtn.innerText = '-';
 	newBtn.addEventListener('click', () => {
 		names.splice(names.indexOf(nameText), 1);
-		newLi.remove();
+		nameLi.remove();
 	});
 };
 
