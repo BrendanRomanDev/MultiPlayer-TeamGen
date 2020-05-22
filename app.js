@@ -8,8 +8,7 @@ const generateBtn = document.querySelector('#submitBtn');
 const resetBtn = document.querySelector('#resetBtn');
 
 ///htmlElements
-const newDiv = document.createElement('div');
-let newUl = document.createElement('ul');
+let newDiv = document.createElement('div');
 
 /////////////////PROGRAM LOGIC//////////////////
 
@@ -18,23 +17,26 @@ let playerCount = names.length;
 
 /////////////////ADDING NAMES//////////////////
 const addPlayer = (name) => {
-	const newLi = document.createElement('li');
+	const newh5 = document.createElement('h5');
 	const newBtn = document.createElement('button');
-	const nameDiv = document.getElementById('user-input-div');
-	nameDiv.innerHTML = '';
-	const nameLi = newLi;
-	nameDiv.appendChild(newUl);
-	newUl.appendChild(nameLi);
-	nameLi.innerText = name;
-	const nameText = nameLi.innerText;
-	names.push(nameText);
-	nameLi.appendChild(newBtn);
-	nameLi.classList.add('player-name-li');
+	const userInputDiv = document.getElementById('user-input-div');
+	userInputDiv.innerHTML = '';
+	userInputDiv.appendChild(newDiv);
+	const playerContainer = document.createElement('div');
+	newDiv.appendChild(playerContainer);
+	playerContainer.classList.add('player-item');
+	playerContainer.appendChild(newh5);
+	playerContainer.appendChild(newBtn);
 	newBtn.innerText = '-';
-	newBtn.classList.add('player-name-btn');
+	newBtn.classList.add('player-btn');
+	newh5.innerText = name;
+	newh5.classList.add('player-name-h5');
+	const nameText = newh5.innerText;
+	names.push(nameText);
+	newh5.classList.add('player-name-h5');
 	newBtn.addEventListener('click', () => {
 		names.splice(names.indexOf(nameText), 1);
-		nameLi.remove();
+		playerContainer.remove();
 	});
 };
 
@@ -87,13 +89,13 @@ resetBtn.addEventListener('click', () => {
 const reset = () => {
 	names = [];
 	const resultDiv = document.querySelector('#result-div');
-	const nameDiv = document.getElementById('user-input-div');
-	newUl = document.createElement('ul');
-	nameDiv.innerHTML = '';
+	const userInputDiv = document.getElementById('user-input-div');
+	userInputDiv.innerHTML = '';
+	newDiv = document.createElement('div');
 	resultDiv.innerHTML = '';
 	const nameInfoMsg = document.createElement('h6');
-	nameDiv.appendChild(nameInfoMsg);
-	nameInfoMsg.classList.add('text-muted', 'mt-5');
+	userInputDiv.appendChild(nameInfoMsg);
+	nameInfoMsg.classList.add('text-muted', 'mt-3');
 	nameInfoMsg.innerText = 'Player names will appear here...';
 	const resultInfoMsg = document.createElement('h6');
 	resultDiv.appendChild(resultInfoMsg);
@@ -124,6 +126,7 @@ const createShuffledList = (nameArray, maxPerTeam) => {
 		const teamTitle = document.createElement('h5');
 		const newUl = document.createElement('ul');
 		resultDiv.appendChild(teamTitle);
+		teamTitle.classList.add('team-title');
 		teamTitle.innerText = `Team ${i + 1}`;
 		//create a new array out of the original name array, contianing only the relevant # of players
 		const teamArr = nameArray.slice(j, j + maxPerTeam);
@@ -135,6 +138,7 @@ const createShuffledList = (nameArray, maxPerTeam) => {
 		for (let name of teamArr) {
 			const newLi = document.createElement('li');
 			newUl.appendChild(newLi);
+			newLi.classList.add('player-result-list');
 			newLi.innerText = name;
 		}
 	}
@@ -142,6 +146,7 @@ const createShuffledList = (nameArray, maxPerTeam) => {
 		const teamTitle = document.createElement('h5');
 		const newUl = document.createElement('ul');
 		resultDiv.appendChild(teamTitle);
+		teamTitle.classList.add('team-title');
 		if (remainingPlayers > 1) {
 			teamTitle.innerText = 'Round Robin Players';
 		} else teamTitle.innerText = 'Round Robin Player';
@@ -151,6 +156,7 @@ const createShuffledList = (nameArray, maxPerTeam) => {
 		for (let name of remainingPlayerArr) {
 			const newLi = document.createElement('li');
 			newUl.appendChild(newLi);
+			newLi.classList.add('player-result-list');
 			newLi.innerText = name;
 		}
 	}

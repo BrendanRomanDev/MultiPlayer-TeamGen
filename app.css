@@ -192,3 +192,62 @@ h5 {
 .generated-teams-row {
 	margin: 0 auto 50px;
 }
+
+//JS TOGGLED CLASSES
+
+.user-input-div {
+	position: relative;
+}
+
+.player-item {
+	background-color: #fbfcfc;
+	position: relative;
+	height: 50px;
+	border-radius: 10px;
+	border-bottom: solid 1px #cccdca;
+	margin-top: 5px;
+}
+
+.player-name-h5 {
+	position: relative;
+	top: 25%;
+	left: 25px;
+	font-size: 1.2rem;
+	text-align: left;
+	letter-spacing: 2px;
+}
+
+.player-btn {
+	height: 25px;
+	width: 30px;
+	position: absolute;
+	right: 10%;
+	bottom: 22%;
+	font-size: 1rem;
+	font-weight: bolder;
+	background-color: #ec6f5a;
+	color: #eef0f2;
+	border: none;
+	border-radius: 5px;
+	border-bottom: 2px solid #ffb399;
+}
+
+/*Styles for your generated list */
+.team-title {
+	background-color: #fbfcfc;
+	position: relative;
+	height: 40px;
+	border-radius: 6px;
+	border-bottom: solid 1px #cccdca;
+	margin-top: 5px;
+	margin-bottom: 0;
+	line-height: 2;
+}
+
+.player-result-list {
+	text-align: left;
+	color: #545d65;
+	font-size: 1rem;
+	position: relative;
+	right: 10%;
+}
