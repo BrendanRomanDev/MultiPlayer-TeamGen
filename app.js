@@ -161,14 +161,3 @@ const createShuffledList = (nameArray, maxPerTeam) => {
 		}
 	}
 };
-
-///next steps///
-// COMPLETED // add an ability to run it back & refresh √
-// replace your alerts with some other error...
-//  ---- when you dont have a # selected and hit generate, it still submits after the error.
-// generate teams should reset the result Div first.
-// what happens if players per team exceeds players entered?
-
-//make it look nice : )
-// need to format the text as it comes in
-///can we add different columns to prevent overflow?

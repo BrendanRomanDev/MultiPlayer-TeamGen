@@ -1,6 +1,6 @@
 /* font-family: 'Rajdhani', sans-serif;
 font-family: 'Ubuntu Mono', monospace;
-font-family: 'VT323', monospace; */
+
 /* font-family: 'Ubuntu', sans-serif; */
 
 body {
@@ -250,4 +250,24 @@ h5 {
 	font-size: 1rem;
 	position: relative;
 	right: 10%;
+}
+
+/* footer */
+
+.footer {
+	position: relative;
+	margin-top: 80px;
+	height: 15vh;
+	background-color: #252a36;
+	text-align: center;
+}
+
+.footer p {
+	position: absolute;
+	font-family: 'Rajdhani', sans-serif;
+	text-transform: none;
+	font-size: .8rem;
+	left: 50%;
+	top: 40%;
+	transform: translate(-50%);
 }
